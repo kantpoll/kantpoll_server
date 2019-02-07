@@ -1,4 +1,4 @@
-## Before creating the campaign
+## Before creating a campaign
 
 The creator, before anything else, needs to have an idea of the number of voters who will participate in the campaign, what group categories he or she will create (for example, men and women), if there will be anonymous groups, if there will be observer nodes, what will be the start and end date of the campaign and if there will be an official website for the campaign.
 
