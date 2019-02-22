@@ -40,3 +40,38 @@ To manage a campaign, click on the "Manage" button at the top of the campaign in
 ## How to add observers (Advanced)
 
 Read the [README.txt](https://sourceforge.net/projects/kantcoin/files/)
+
+## Test
+
+If you want to simulate the insertion of a few hundred voters, you can do this:
+
+1) Create a campaign.
+2) Create a group category.
+3) Create 10 groups of 81 voters.
+4) Press CTRL + SHIFT + I and go to the console tab.
+5) Paste this:
+```
+let results2 = "";
+let results = "";
+let seed2 = ethers.HDNode.mnemonicToSeed("tell zone wine demand model display noodle corn mention river shaft please");
+let hdMaster2 = ethers.HDNode.fromSeed(seed2);
+for(let i=0; i < 809; i++){
+    let user = "user" + i;
+
+    let key = hdMaster2.derivePath('m/0/' + i);
+    let aux_signingkey = new ethers.SigningKey(key.privateKey);
+    let pubkey = aux_signingkey.publicKey.substring(2);
+    let address = aux_signingkey.address;
+    
+    results += user + ";" + address + ";" + pubkey + "\r\n"
+    results2 += address + ";" + Math.floor((i) / 81) + ";" + (i % 81) + "\r\n"
+}
+
+insert_voters_textarea.value = results
+```
+6) On the admin page, in the GROUPS tab, press INSERT to insert voters. Wait a minute.
+7) Go to the console tab and paste this:
+```
+add_voters_to_groups_textarea.value = results2
+```
+8) Press ADD to add voters to groups. Wait a few minutes.
