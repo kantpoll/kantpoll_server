@@ -37,7 +37,7 @@ To manage a campaign, click on the "Manage" button at the top of the campaign in
 11. Click on "Count votes" in the "Network" tab. Voters should see a *double blue check*.
 12. Go back to step 4 and create a new round, if applicable.
 
-## How to add observers (Advanced)
+## How to add observers
 
 Read the [README.txt](https://sourceforge.net/projects/kantcoin/files/)
 
